@@ -1,0 +1,24 @@
+{
+    "family": "primer-designer-task",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+      {
+        "name": "primer-designer-front-end-container",
+        "image": "<IMAGE_URI>",
+        "essential": true,
+        "portMappings": [
+          {
+            "containerPort": 5000,
+            "hostPort": 5000
+          }
+        ],
+        "memory": 1024,
+        "cpu": 512
+      }
+    ],
+    "requiresCompatibilities": ["FARGATE"],
+    "cpu": "512",
+    "memory": "1024",
+    "executionRoleArn": "arn:aws:iam::992382821771:role/ecsTaskExecutionRole",
+    "taskRoleArn": "arn:aws:iam::992382821771:role/ecsTaskRole"
+  }
