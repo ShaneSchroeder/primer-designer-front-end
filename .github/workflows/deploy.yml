@@ -71,6 +71,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: .github/workflows/ecs-task-definition.json
-        service: primer-designer-front-end-prod-service
+        service: primer-designer-front-end-production-service
         cluster: bioinfo_cluster
         wait-for-service-stability: true
