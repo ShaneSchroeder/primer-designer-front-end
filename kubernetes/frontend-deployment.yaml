@@ -17,3 +17,6 @@ spec:
         image: 992382821771.dkr.ecr.us-east-2.amazonaws.com/primer-designer-front-end:latest
         ports:
         - containerPort: 80
+        env:
+            - name: NODE_ENV
+              value: "production"

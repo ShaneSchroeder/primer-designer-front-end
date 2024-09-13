@@ -4,7 +4,7 @@
 
 	const API_URL =
 		process.env.NODE_ENV === 'production'
-			? 'http://backend-service:8000' // Kubernetes internal service
+			? 'http://primered-api.domain.com' // Kubernetes internal service
 			: 'http://127.0.0.1:8000'; // Local development
 	let dnaSequence = '';
 	let primerLength = 20;
@@ -23,7 +23,7 @@
 		};
 
 		try {
-			const response = await fetch('http://127.0.0.1:8000/design-primer/', {
+			const response = await fetch(`${API_URL}/design-primer/`, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
