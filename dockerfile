@@ -1,5 +1,5 @@
 # Stage 1: Build the Svelte app
-FROM node:22 as build
+FROM node:22 AS build
 
 # Set working directory
 WORKDIR /app
@@ -24,6 +24,7 @@ COPY --from=build /app/build /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
+EXPOSE 443
 
 # Start nginx
 CMD ["nginx", "-g", "daemon off;"]
